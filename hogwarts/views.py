@@ -1,12 +1,16 @@
+from django.shortcuts import render, redirect
+from .models import House, Student
+from .forms import HouseForm, StudentForm
+
 def house_list(request):
     houses = House.objects.all()
-    return render(req, 'house_list.html', {'houses': houses})
+    return render(request, 'house_list.html', {'houses': houses})
 
 def house_detail(request, id):
     house = House.objects.get(id = id)
-    return res(request, 'house_detail.html', {'house': house})
+    return render(request, 'house_detail.html', {'house': house})
 
-def house_create(response):
+def house_create(request):
     if request.method == 'POST':
         form = HouseForm(request.body)
         if form.is_valid:

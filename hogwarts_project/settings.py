@@ -36,7 +36,10 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles'
+    'django.contrib.staticfiles',
+    'hogwarts',
+    'django_extensions'
+
 ]
 
 MIDDLEWARE = [
@@ -76,9 +79,9 @@ WSGI_APPLICATION = 'hogwarts_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'hogwarts_django',
-        'USER': 'hogwarts_user',
-        'PASSWORD': 'hogwarts',
+        'NAME': 'hogwarts',
+        'USER': 'jun',
+        'PASSWORD': '921016',
         'HOST': 'localhost'
     }
 }
